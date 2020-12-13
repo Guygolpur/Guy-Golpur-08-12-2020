@@ -1,0 +1,86 @@
+.App {
+  height: 100vh
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 100%;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  border-right: 4px solid black;
+}
+
+nav li {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 16px 13px;
+}
+
+nav a:hover {
+  background: black;
+  color: white;
+}
+
+.email-list-item {
+  text-decoration: none;
+  color: black;
+}
+
+.page-body {
+  padding: 1.1%;
+}
+
+#send-email-form {
+  padding: 1.1%;
+}
+
+.empty-content {
+  text-align: center;
+  position: flex;
+  justify-content: "space-between";
+}
+
+@media screen and (max-width: 1150px) {
+  body {
+    font-size: 85%;
+  }
+  .email-list-item {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    font-size: 65%;
+  }
+  .email-list-item {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    font-size: 55%;
+  }
+  .email-list-item {
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 45%;
+  }
+}
