@@ -11,7 +11,7 @@ const EmailListPage = (props) => {
         const fetchData = async () => {
             try {
                 const proxyurl = "https://cors-anywhere.herokuapp.com/"
-                const url = `https://guy-golpur-messaging-system.herokuapp.com/api/email-list?receiverEmailAddress=${emailAccount}`
+                let url = `https://guy-golpur-messaging-system.herokuapp.com/api/email-list?receiverEmailAddress=${emailAccount}`
                 const result = await fetch(proxyurl + url)
                 const body = await result.json()
                 setEmailList(body)

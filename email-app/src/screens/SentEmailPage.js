@@ -31,7 +31,7 @@ const SentEmailPage = ({ match }) => {
         const fetchData = async () => {
             try {
                 const proxyurl = "https://cors-anywhere.herokuapp.com/"
-                const url = `https://guy-golpur-messaging-system.herokuapp.com/api/spec-email-sent/${senderEmailId}/${emailAccount}`
+                let url = `https://guy-golpur-messaging-system.herokuapp.com/api/spec-email-sent/${senderEmailId}/${emailAccount}`
                 const result = await fetch(proxyurl + url)
                 const body = await result.json()
                 setEmailContent([body])
@@ -45,7 +45,7 @@ const SentEmailPage = ({ match }) => {
     const deleteEmailFromDb = async (receiverEmailAddress, emailId) => {
         try {
             const proxyurl = "https://cors-anywhere.herokuapp.com/"
-            const url = 'https://guy-golpur-messaging-system.herokuapp.com/api/deleteSentEmail'
+            let url = 'https://guy-golpur-messaging-system.herokuapp.com/api/deleteSentEmail'
             await fetch((proxyurl + url), {
                 method: 'DELETE',
                 headers: {

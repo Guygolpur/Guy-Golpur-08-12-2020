@@ -16,7 +16,7 @@ const ComposeEmailForm = (props) => {
         time = today.getHours() + ':' + (today.getMinutes())
 
         const proxyurl = "https://cors-anywhere.herokuapp.com/"
-        const url = `https://guy-golpur-messaging-system.herokuapp.com/api/composeNewEmail`
+        let url = `https://guy-golpur-messaging-system.herokuapp.com/api/composeNewEmail`
         await fetch((proxyurl + url), {
             method: 'post',
             body: JSON.stringify({ senderEmailAddress, receiverEmailAddress, subject: emailSubject, messageContent: emailContent, date, time }),

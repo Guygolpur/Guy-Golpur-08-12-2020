@@ -46,7 +46,7 @@ const EmailPage = ({ match }) => {
     const deleteEmailFromDb = async (receiverEmailAddress, emailId) => {
         try {
             const proxyurl = "https://cors-anywhere.herokuapp.com/"
-            const url = 'https://guy-golpur-messaging-system.herokuapp.com/api/deleteEmail'
+            let url = 'https://guy-golpur-messaging-system.herokuapp.com/api/deleteEmail'
             await fetch((proxyurl + url), {
                 method: 'DELETE',
                 headers: {
