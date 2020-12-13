@@ -1,5 +1,8 @@
 # Guy-Golpur-08-12-2020
 
+Please open with google chrome.
+
+
 There are two users that can be used to connect to the system and perform actions:
 
 
