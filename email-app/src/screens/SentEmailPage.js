@@ -46,7 +46,7 @@ const SentEmailPage = ({ match }) => {
         try {
             const proxyurl = "https://cors-anywhere.herokuapp.com/"
             const url = 'https://guy-golpur-messaging-system.herokuapp.com/api/deleteSentEmail'
-            const result = await fetch((proxyurl + url), {
+            await fetch((proxyurl + url), {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

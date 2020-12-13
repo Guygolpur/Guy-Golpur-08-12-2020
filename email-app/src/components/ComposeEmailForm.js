@@ -17,14 +17,13 @@ const ComposeEmailForm = (props) => {
 
         const proxyurl = "https://cors-anywhere.herokuapp.com/"
         const url = `https://guy-golpur-messaging-system.herokuapp.com/api/composeNewEmail`
-        const result = await fetch((proxyurl + url), {
+        await fetch((proxyurl + url), {
             method: 'post',
             body: JSON.stringify({ senderEmailAddress, receiverEmailAddress, subject: emailSubject, messageContent: emailContent, date, time }),
             headers: {
                 'Content-Type': 'application/json',
             }
         })
-        const body = await result.json()
     }
 
     return (

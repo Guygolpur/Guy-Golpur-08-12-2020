@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Badge from '@material-ui/core/Badge'
-import Avatar from '@material-ui/core/Avatar'
 import Button from '@material-ui/core/Button'
 import { makeStyles, withStyles } from '@material-ui/core/styles'
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew'
