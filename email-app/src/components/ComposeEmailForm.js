@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
+import { Redirect } from 'react-router-dom'
 
 
 const ComposeEmailForm = (props) => {
     const [receiverEmailAddress, setReceiverEmailAddress] = useState('')
     const [emailSubject, setEmailSubject] = useState('')
     const [emailContent, setEmailContent] = useState('')
+    const [isRedirectReady, setIsRedirectReady] = useState(false)
     const senderEmailAddress = props.accountEmailAddress
 
     const sendEmail = async () => {
@@ -24,8 +26,13 @@ const ComposeEmailForm = (props) => {
                 'Content-Type': 'application/json',
             }
         })
+        setIsRedirectReady(true)
+
     }
 
+    if (isRedirectReady) {
+        return <Redirect to="/sent-email-list" />
+    }
     return (
         <div id="send-email-form">
             <h1>Compose New Email</h1>
@@ -72,7 +79,7 @@ const ComposeEmailForm = (props) => {
                     multiline={true}
                     rows="17"
                 />
-                <Button variant="outlined" color="primary" type="submit">
+                <Button variant="outlined" color="primary" onClick={() => sendEmail()}>
                     Send Email
                 </Button>
             </form>
